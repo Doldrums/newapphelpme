@@ -7,6 +7,7 @@ import android.support.v7.widget.CardView;
 import android.view.View;
 
 
+import com.example.rina.new_app_help_me.R;
 import com.example.rina.new_app_help_me.helper.SharedPrefManager;
 import com.example.rina.new_app_help_me.models.User;
 

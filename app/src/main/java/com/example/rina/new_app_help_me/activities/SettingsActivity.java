@@ -1,6 +1,7 @@
 package com.example.rina.new_app_help_me.activities;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -8,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.rina.new_app_help_me.R;
@@ -26,6 +28,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class SettingsActivity extends AppCompatActivity implements View.OnClickListener{
 
     private Button buttonUpdate;
+    private TextView buttonReturn;
     private EditText editTextName, editTextEmail, editTextPassword;
     private RadioGroup radioGender;
 
@@ -35,6 +38,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         setContentView(R.layout.activity_settings);
 
         buttonUpdate = (Button) findViewById(R.id.buttonUpdate);
+        buttonReturn =(TextView) findViewById(R.id.Return);
 
         editTextName = (EditText) findViewById(R.id.editTextName);
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
@@ -56,6 +60,15 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         } else {
             radioGender.check(R.id.radioFemale);
         }
+
+
+
+        buttonReturn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(SettingsActivity.this, Home_dashboard_activity.class));
+            }
+        });
 
     }
         private void updateUser() {
@@ -95,6 +108,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
                     Toast.makeText(getApplicationContext(), response.body().getMessage(), Toast.LENGTH_LONG).show();
                     if (!response.body().getError()) {
                         SharedPrefManager.getInstance(getApplicationContext()).userLogin(response.body().getUser());
+                        startActivity(new Intent(SettingsActivity.this, Home_dashboard_activity.class));
                     }
                 }
 

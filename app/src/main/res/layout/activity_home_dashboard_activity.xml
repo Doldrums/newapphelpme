@@ -38,11 +38,11 @@
                         android:orientation="vertical"
                         android:gravity="center">
                         <ImageView
-                            android:layout_width="64dp"
-                            android:layout_height="64dp"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
                             android:background="@drawable/cerclebackgroundpurple"
-                            android:src="@drawable/ic_attach_money_black_24dp"
-                            android:padding="10dp"/>
+                            android:src="@drawable/settings"
+                            android:padding="5dp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -58,7 +58,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="тут какой-то текст текст текст текст "
+                            android:text="Можно изменить личные данные"
                             android:padding="5dp"
                             android:textColor="@android:color/darker_gray"/>
 
@@ -77,11 +77,11 @@
                         android:orientation="vertical"
                         android:gravity="center">
                         <ImageView
-                            android:layout_width="64dp"
-                            android:layout_height="64dp"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
                             android:background="@drawable/cerclebackgroundpink"
-                            android:src="@drawable/ic_lightbulb_outline_black_24dp"
-                            android:padding="10dp"/>
+                            android:src="@drawable/enter_card"
+                            android:padding="5dp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -124,17 +124,17 @@
                         android:orientation="vertical"
                         android:gravity="center">
                         <ImageView
-                            android:layout_width="64dp"
-                            android:layout_height="64dp"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
                             android:background="@drawable/cerclebackgroundgreen"
-                            android:src="@drawable/ic_control_point_black_24dp"
-                            android:padding="10dp"/>
+                            android:src="@drawable/messages"
+                            android:padding="5dp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textStyle="bold"
                             android:layout_marginTop="10dp"
-                            android:text="Add"/>
+                            android:text="Сообщения"/>
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
@@ -144,7 +144,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="Check your bank activities"
+                            android:text="Многновенная связь пользователей"
                             android:padding="5dp"
                             android:textColor="@android:color/darker_gray"/>
 
