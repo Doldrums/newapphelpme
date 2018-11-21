@@ -79,4 +79,10 @@ public class Teacher extends AppCompatActivity {
         }
     }
 
+
+    @Override
+    public void onBackPressed() {
+
+    }
+
 }

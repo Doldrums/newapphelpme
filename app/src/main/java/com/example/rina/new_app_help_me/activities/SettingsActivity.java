@@ -130,4 +130,10 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
             updateUser();
         }
     }
+
+
+    @Override
+    public void onBackPressed() {
+
+    }
 }

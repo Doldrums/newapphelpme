@@ -43,4 +43,11 @@ public class Student extends AppCompatActivity {
             }
         });
     }
+
+
+
+    @Override
+    public void onBackPressed() {
+
+    }
 }

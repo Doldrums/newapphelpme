@@ -58,4 +58,12 @@ public class Home_dashboard_activity extends AppCompatActivity {
             }
         });
     }
+
+
+
+
+    @Override
+    public void onBackPressed() {
+
+    }
 }

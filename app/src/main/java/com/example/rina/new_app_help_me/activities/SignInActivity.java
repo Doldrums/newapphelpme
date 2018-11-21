@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.rina.new_app_help_me.R;
@@ -24,6 +25,7 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
 
     private EditText editTextEmail, editTextPassword;
     private Button buttonSignIn;
+    private TextView sigh_up;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,9 +35,19 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
 
+        sigh_up =(TextView)findViewById(R.id.SignUp);
+
         buttonSignIn = (Button) findViewById(R.id.buttonSignIn);
 
         buttonSignIn.setOnClickListener(this);
+
+
+        sigh_up.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(SignInActivity.this, RegistrationActivity.class));
+            }
+        });
     }
 
     private void userSignIn() {
@@ -82,5 +94,11 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
         if (view == buttonSignIn) {
             userSignIn();
         }
+    }
+
+
+    @Override
+    public void onBackPressed() {
+
     }
 }

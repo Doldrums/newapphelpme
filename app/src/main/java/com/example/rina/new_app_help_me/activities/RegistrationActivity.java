@@ -131,4 +131,12 @@ public class RegistrationActivity extends AppCompatActivity implements View.OnCl
             userSignUp();
         }
     }
+
+
+
+
+    @Override
+    public void onBackPressed() {
+
+    }
 }
