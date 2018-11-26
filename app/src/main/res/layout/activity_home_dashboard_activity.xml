@@ -28,7 +28,7 @@
                 <android.support.v7.widget.CardView
                     android:foreground="?android:attr/selectableItemBackground"
                     android:clickable="true"
-                    android:id="@+id/birga"
+                    android:id="@+id/settings"
                     android:layout_width="160dp"
                     android:layout_height="190dp"
                     android:layout_margin="10dp">
@@ -42,7 +42,7 @@
                             android:layout_height="70dp"
                             android:background="@drawable/cerclebackgroundpurple"
                             android:src="@drawable/settings"
-                            android:padding="5dp"/>
+                            android:padding="3dp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -80,8 +80,8 @@
                             android:layout_width="70dp"
                             android:layout_height="70dp"
                             android:background="@drawable/cerclebackgroundpink"
-                            android:src="@drawable/enter_card"
-                            android:padding="5dp"/>
+                            android:src="@drawable/search"
+                            android:padding="8dp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -127,7 +127,7 @@
                             android:layout_width="70dp"
                             android:layout_height="70dp"
                             android:background="@drawable/cerclebackgroundgreen"
-                            android:src="@drawable/messages"
+                            android:src="@drawable/massage"
                             android:padding="5dp"/>
                         <TextView
                             android:layout_width="wrap_content"
@@ -165,17 +165,17 @@
                         android:orientation="vertical">
 
                         <ImageView
-                            android:layout_width="64dp"
-                            android:layout_height="64dp"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
                             android:background="@drawable/cerclebackgroundyello"
-                            android:padding="10dp"
-                            android:src="@drawable/ic_attach_file_black_24dp" />
+                            android:padding="3dp"
+                            android:src="@drawable/files" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
-                            android:text="Links"
+                            android:text="Документы"
                             android:textStyle="bold" />
 
                         <View
@@ -189,7 +189,7 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:padding="5dp"
-                            android:text="Check your bank activities"
+                            android:text="Тоже не очень понятно что"
                             android:textColor="@android:color/darker_gray" />
 
                     </LinearLayout>
@@ -207,7 +207,7 @@
                 <android.support.v7.widget.CardView
                     android:foreground="?android:attr/selectableItemBackground"
                     android:clickable="true"
-                    android:id="@+id/calendar"
+                    android:id="@+id/support"
                     android:layout_width="160dp"
                     android:layout_height="190dp"
                     android:layout_margin="10dp">
@@ -217,17 +217,17 @@
                         android:orientation="vertical"
                         android:gravity="center">
                         <ImageView
-                            android:layout_width="64dp"
-                            android:layout_height="64dp"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
                             android:background="@drawable/cerclebackgroundpurple"
-                            android:src="@drawable/ic_attach_money_black_24dp"
-                            android:padding="10dp"/>
+                            android:src="@drawable/achievements"
+                            android:padding="2dp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textStyle="bold"
                             android:layout_marginTop="10dp"
-                            android:text="Banking"/>
+                            android:text="Поддержка"/>
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
@@ -237,7 +237,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="Check your bank activities"
+                            android:text="По любым вопросам вам сюда"
                             android:padding="5dp"
                             android:textColor="@android:color/darker_gray"/>
 
@@ -256,17 +256,17 @@
                         android:orientation="vertical"
                         android:gravity="center">
                         <ImageView
-                            android:layout_width="64dp"
-                            android:layout_height="64dp"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
                             android:background="@drawable/cerclebackgroundpink"
-                            android:src="@drawable/ic_lightbulb_outline_black_24dp"
-                            android:padding="10dp"/>
+                            android:src="@drawable/winer_winer_chicken_diner"
+                            android:padding="5dp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textStyle="bold"
                             android:layout_marginTop="10dp"
-                            android:text="Ideas"/>
+                            android:text="Победитель"/>
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
@@ -276,7 +276,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="Check your bank activities"
+                            android:text="Типа рейтинг школы или что?"
                             android:padding="5dp"
                             android:textColor="@android:color/darker_gray"/>
 
@@ -295,7 +295,7 @@
                 <android.support.v7.widget.CardView
                     android:foreground="?android:attr/selectableItemBackground"
                     android:clickable="true"
-                    android:id="@+id/settings"
+                    android:id="@+id/birga"
                     android:layout_width="160dp"
                     android:layout_height="190dp"
                     android:layout_margin="10dp">
@@ -305,17 +305,17 @@
                         android:orientation="vertical"
                         android:gravity="center">
                         <ImageView
-                            android:layout_width="64dp"
-                            android:layout_height="64dp"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
                             android:background="@drawable/cerclebackgroundpurple"
-                            android:src="@drawable/ic_attach_money_black_24dp"
+                            android:src="@drawable/server"
                             android:padding="10dp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textStyle="bold"
                             android:layout_marginTop="10dp"
-                            android:text="Banking"/>
+                            android:text="Биржа Задач"/>
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
@@ -325,7 +325,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="Check your bank activities"
+                            android:text="Раздение труда и все такое"
                             android:padding="5dp"
                             android:textColor="@android:color/darker_gray"/>
 
@@ -336,15 +336,17 @@
                     android:clickable="true"
                     android:layout_width="160dp"
                     android:layout_height="190dp"
-                    android:layout_margin="10dp">
+                    android:layout_margin="10dp"
+                    android:id="@+id/calendar"
+                    tools:ignore="DuplicateIds">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         android:gravity="center">
                         <ImageView
-                            android:layout_width="64dp"
-                            android:layout_height="64dp"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
                             android:background="@drawable/cerclebackgroundpink"
                             android:src="@drawable/ic_lightbulb_outline_black_24dp"
                             android:padding="10dp"/>
@@ -353,7 +355,7 @@
                             android:layout_height="wrap_content"
                             android:textStyle="bold"
                             android:layout_marginTop="10dp"
-                            android:text="Ideas"/>
+                            android:text="Новости"/>
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
@@ -363,7 +365,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="Check your bank activities"
+                            android:text="Иконка типа календарь"
                             android:padding="5dp"
                             android:textColor="@android:color/darker_gray"/>
 
@@ -391,8 +393,8 @@
                         android:orientation="vertical"
                         android:gravity="center">
                         <ImageView
-                            android:layout_width="64dp"
-                            android:layout_height="64dp"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
                             android:background="@drawable/cerclebackgroundpurple"
                             android:src="@drawable/ic_wifi_black_24dp"
                             android:padding="10dp"/>
@@ -401,7 +403,7 @@
                             android:layout_height="wrap_content"
                             android:textStyle="bold"
                             android:layout_marginTop="10dp"
-                            android:text="Add"/>
+                            android:text="Выйти из аккаунта"/>
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
@@ -411,7 +413,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="Check your bank activities"
+                            android:text="Здесь надо иконку типа выход"
                             android:padding="5dp"
                             android:textColor="@android:color/darker_gray"/>
 

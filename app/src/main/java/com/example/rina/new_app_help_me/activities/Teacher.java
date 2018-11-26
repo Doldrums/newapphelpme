@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,6 +28,8 @@ public class Teacher extends AppCompatActivity {
     private IntentIntegrator qrScan;
     private TextView text;
 
+    private Button exit;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,7 +37,15 @@ public class Teacher extends AppCompatActivity {
         qrScan = new IntentIntegrator(this);
         qrScan.initiateScan();
         text =(TextView) findViewById(R.id.textW);
+        exit = (Button)findViewById(R.id.buttonExit);
 
+
+        exit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Teacher.this, Home_dashboard_activity.class));
+            }
+        });
 
     }
     @Override

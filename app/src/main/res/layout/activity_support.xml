@@ -1,0 +1,154 @@
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="true"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textSize="12pt"
+        android:layout_marginStart="10dp"
+        android:text="Поддержка"
+        android:textColor="@color/lightgray"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14dp"
+        android:layout_marginStart="10dp"
+        android:text="Вы всегда можете обратиться к нам по любым вопросам, а мы гарантируем моментальный ответ"/>
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="20dp"
+        android:text="Авторство"
+        android:textSize="8pt"
+        android:textColor="@color/lightgray"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14dp"
+        android:layout_marginStart="10dp"
+        android:text="- Великий и ужасный Android Developer"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="180dp"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Найти меня можно"
+            android:textSize="14dp"
+            android:layout_marginStart="10dp" />
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Здесь"
+            android:textColor="@color/colorAccent"
+            android:textStyle="italic"
+            android:gravity="bottom"
+            android:clickable="true"
+            android:layout_marginStart="10dp"
+            android:id="@+id/Return"/>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14dp"
+        android:layout_marginStart="10dp"
+        android:text="- Славный и ленивый Web Designer"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="180dp"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Обнаружить можно"
+            android:textSize="14dp"
+            android:layout_marginStart="10dp" />
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Тута"
+            android:textColor="@color/colorAccent"
+            android:textStyle="italic"
+            android:gravity="bottom"
+            android:clickable="true"
+            android:layout_marginStart="10dp"
+            android:id="@+id/Return1"/>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="20dp"
+        android:text="Контакты для связи"
+        android:textSize="8pt"
+        android:textColor="@color/lightgray"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14dp"
+        android:layout_marginStart="10dp"
+        android:text="- Doldrums.3@gmail.com"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14dp"
+        android:layout_marginStart="10dp"
+        android:text="- Liza.3@gmail.com"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14dp"
+        android:layout_marginStart="10dp"
+        android:text="- https://vk.com/dravsrvuite"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14dp"
+        android:layout_marginStart="10dp"
+        android:text="- https://vk.com/id279250920"/>
+
+
+    <Button
+        android:id="@+id/buttonExit"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="В главное меню" />
+
+
+</LinearLayout>
+

@@ -27,7 +27,16 @@
         <activity android:name=".activities.SignInActivity" />
         <activity android:name=".activities.Student" />
         <activity android:name=".activities.Teacher" />
-        <activity android:name=".activities.SettingsActivity"></activity>
+        <activity android:name=".activities.SettingsActivity" />
+        <activity
+            android:name=".activities.CalendarActivity"
+            android:label="@string/title_activity_calendar"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".activities.SupportActivity" />
+        <activity
+            android:name=".activities.BirgaActivity"
+            android:label="@string/title_activity_birga"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>
