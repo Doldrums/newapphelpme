@@ -1,8 +1,8 @@
 package com.example.rina.new_app_help_me.activities;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
@@ -17,12 +17,12 @@ public class SupportActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_support);
 
-        Exit = (Button)findViewById(R.id.buttonExit);
+        Exit = findViewById(R.id.buttonExit);
 
         Exit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(SupportActivity.this, Home_dashboard_activity.class));
+                startActivity(new Intent(SupportActivity.this, HomeDashboardActivity.class));
             }
         });
     }

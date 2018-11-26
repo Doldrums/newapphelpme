@@ -8,7 +8,6 @@ import com.example.rina.new_app_help_me.models.User;
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
-
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
@@ -45,7 +44,6 @@ public interface APIService {
             @Field("password") String password,
             @Field("gender") String gender
     );
-
 
 
     @GET("userby/{email}")
