@@ -23,10 +23,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".activities.RegistrationActivity" />
-        <activity android:name=".activities.Home_dashboard_activity" />
+        <activity android:name=".activities.HomeDashboardActivity" />
         <activity android:name=".activities.SignInActivity" />
-        <activity android:name=".activities.Student" />
-        <activity android:name=".activities.Teacher" />
+        <activity android:name=".activities.StudentActivity" />
+        <activity android:name=".activities.TeacherActivity" />
         <activity android:name=".activities.SettingsActivity" />
         <activity
             android:name=".activities.CalendarActivity"

@@ -2,8 +2,8 @@ package com.example.rina.new_app_help_me.activities;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -25,7 +25,9 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class SettingsActivity extends AppCompatActivity implements View.OnClickListener{
+public class SettingsActivity extends AppCompatActivity implements View.OnClickListener {
+
+    APIService service;
 
     private Button buttonUpdate;
     private TextView buttonReturn;
@@ -37,15 +39,14 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
-        buttonUpdate = (Button) findViewById(R.id.buttonUpdate);
-        buttonReturn =(TextView) findViewById(R.id.Return);
+        buttonUpdate = findViewById(R.id.buttonUpdate);
+        buttonReturn = findViewById(R.id.Return);
 
-        editTextName = (EditText) findViewById(R.id.editTextName);
-        editTextEmail = (EditText) findViewById(R.id.editTextEmail);
-        editTextPassword = (EditText) findViewById(R.id.editTextPassword);
+        editTextName = findViewById(R.id.editTextName);
+        editTextEmail = findViewById(R.id.editTextEmail);
+        editTextPassword = findViewById(R.id.editTextPassword);
 
-        radioGender = (RadioGroup) findViewById(R.id.radioGender);
-
+        radioGender = findViewById(R.id.radioGender);
 
         buttonUpdate.setOnClickListener(this);
 
@@ -62,66 +63,64 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         }
 
 
-
         buttonReturn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(SettingsActivity.this, Home_dashboard_activity.class));
+                startActivity(new Intent(SettingsActivity.this, HomeDashboardActivity.class));
             }
         });
 
     }
-        private void updateUser() {
-            final ProgressDialog progressDialog = new ProgressDialog(this);
-            progressDialog.setMessage("Updating...");
-            progressDialog.show();
 
-            final RadioButton radioSex = (RadioButton) findViewById(radioGender.getCheckedRadioButtonId());
+    private void updateUser() {
+        final ProgressDialog progressDialog = new ProgressDialog(this);
+        progressDialog.setMessage("Updating...");
+        progressDialog.show();
 
-            String name = editTextName.getText().toString().trim();
-            final String email = editTextEmail.getText().toString().trim();
-            String password = editTextPassword.getText().toString().trim();
-            String gender = radioSex.getText().toString();
+        final RadioButton radioSex = findViewById(radioGender.getCheckedRadioButtonId());
 
-            Retrofit retrofit = new Retrofit.Builder()
-                    .baseUrl(APIUrl.BASE_URL)
-                    .addConverterFactory(GsonConverterFactory.create())
-                    .build();
+        String name = editTextName.getText().toString().trim();
+        final String email = editTextEmail.getText().toString().trim();
+        String password = editTextPassword.getText().toString().trim();
+        String gender = radioSex.getText().toString();
 
-            APIService service = retrofit.create(APIService.class);
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(APIUrl.BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
 
-            User user = new User(SharedPrefManager.getInstance(this).getUser().getId(), name, email, password, gender);
+        //TODO move service to
+        service = retrofit.create(APIService.class);
 
-            Call<Result> call = service.updateUser(
-                    user.getId(),
-                    user.getName(),
-                    user.getEmail(),
-                    user.getPassword(),
-                    user.getGender()
-            );
+        User user = new User(SharedPrefManager.getInstance(this).getUser().getId(), name, email, password, gender);
 
-            call.enqueue(new Callback<Result>() {
-                @Override
+        Call<Result> call = service.updateUser(
+                user.getId(),
+                user.getName(),
+                user.getEmail(),
+                user.getPassword(),
+                user.getGender()
+        );
 
-                public void onResponse(Call<Result> call, Response<Result> response) {
-                    progressDialog.dismiss();
-                    Toast.makeText(getApplicationContext(), response.body().getMessage(), Toast.LENGTH_LONG).show();
-                    if (!response.body().getError()) {
-                        SharedPrefManager.getInstance(getApplicationContext()).userLogin(response.body().getUser());
-                        startActivity(new Intent(SettingsActivity.this, Home_dashboard_activity.class));
-                    }
+        call.enqueue(new Callback<Result>() {
+
+            @Override
+            public void onResponse(Call<Result> call, Response<Result> response) {
+                progressDialog.dismiss();
+                Toast.makeText(getApplicationContext(), response.body().getMessage(), Toast.LENGTH_LONG).show();
+                if (!response.body().getError()) {
+                    SharedPrefManager.getInstance(getApplicationContext()).userLogin(response.body().getUser());
+                    startActivity(new Intent(SettingsActivity.this, HomeDashboardActivity.class));
                 }
+            }
 
-                @Override
-                public void onFailure(Call<Result> call, Throwable t) {
-                    progressDialog.dismiss();
-                    Toast.makeText(getApplicationContext(), t.getMessage(), Toast.LENGTH_LONG).show();
-                }
-            });
-        }
-
-
-
+            @Override
+            public void onFailure(Call<Result> call, Throwable t) {
+                progressDialog.dismiss();
+                Toast.makeText(getApplicationContext(), t.getMessage(), Toast.LENGTH_LONG).show();
+            }
+        });
+    }
 
 
     @Override

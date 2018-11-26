@@ -6,7 +6,6 @@ import android.content.SharedPreferences;
 import com.example.rina.new_app_help_me.models.User;
 
 
-
 public class SharedPrefManager {
 
     private static SharedPrefManager mInstance;
@@ -45,9 +44,7 @@ public class SharedPrefManager {
 
     public boolean isLoggedIn() {
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
-        if (sharedPreferences.getString(KEY_USER_EMAIL, null) != null)
-            return true;
-        return false;
+        return sharedPreferences.getString(KEY_USER_EMAIL, null) != null;
     }
 
     public User getUser() {

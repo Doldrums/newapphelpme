@@ -3,7 +3,6 @@ package com.example.rina.new_app_help_me.models;
 import com.google.gson.annotations.SerializedName;
 
 
-
 public class Result {
     @SerializedName("error")
     private Boolean error;

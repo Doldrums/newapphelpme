@@ -18,8 +18,6 @@ import com.example.rina.new_app_help_me.api.APIUrl;
 import com.example.rina.new_app_help_me.models.Result;
 import com.example.rina.new_app_help_me.models.User;
 
-
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -39,21 +37,19 @@ public class RegistrationActivity extends AppCompatActivity implements View.OnCl
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
 
-        buttonSignUp = (Button) findViewById(R.id.buttonSignUp);
-
-        editTextName = (EditText) findViewById(R.id.editTextName);
-        editTextEmail = (EditText) findViewById(R.id.editTextEmail);
-        editTextPassword = (EditText) findViewById(R.id.editTextPassword);
-
-        radioGender = (RadioGroup) findViewById(R.id.radioGender);
-        radioType = (RadioGroup) findViewById(R.id.radioType);
-
-        signin = (TextView)findViewById(R.id.SignIn);
-
+        buttonSignUp = findViewById(R.id.buttonSignUp);
         buttonSignUp.setOnClickListener(this);
 
+        editTextName = findViewById(R.id.editTextName);
+        editTextEmail = findViewById(R.id.editTextEmail);
+        editTextPassword = findViewById(R.id.editTextPassword);
 
+        radioGender = findViewById(R.id.radioGender);
+        radioType = findViewById(R.id.radioType);
 
+        signin = findViewById(R.id.SignIn);
+
+        //TODO move listener to private field
         signin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -69,8 +65,8 @@ public class RegistrationActivity extends AppCompatActivity implements View.OnCl
         progressDialog.show();
 
         //getting the user values
-        final RadioButton radioSex = (RadioButton) findViewById(radioGender.getCheckedRadioButtonId());
-        final RadioButton radioTyp =(RadioButton) findViewById(radioType.getCheckedRadioButtonId());
+        final RadioButton radioSex = findViewById(radioGender.getCheckedRadioButtonId());
+        final RadioButton radioTyp = findViewById(radioType.getCheckedRadioButtonId());
 
         String name = editTextName.getText().toString().trim();
         String email = editTextEmail.getText().toString().trim();
@@ -122,7 +118,6 @@ public class RegistrationActivity extends AppCompatActivity implements View.OnCl
         });
 
 
-
     }
 
     @Override
@@ -131,8 +126,6 @@ public class RegistrationActivity extends AppCompatActivity implements View.OnCl
             userSignUp();
         }
     }
-
-
 
 
     @Override

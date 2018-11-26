@@ -1,4 +1,5 @@
 package com.example.rina.new_app_help_me.models;
+
 public class User {
 
     private int id;
@@ -16,7 +17,7 @@ public class User {
         this.type = type;
     }
 
-    public User(int id, String name, String email, String gender, String type){
+    public User(int id, String name, String email, String gender, String type) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -45,7 +46,7 @@ public class User {
         return email;
     }
 
-    public String getPassword(){
+    public String getPassword() {
         return password;
     }
 
@@ -53,5 +54,7 @@ public class User {
         return gender;
     }
 
-    public String getType(){ return type;}
+    public String getType() {
+        return type;
+    }
 }
