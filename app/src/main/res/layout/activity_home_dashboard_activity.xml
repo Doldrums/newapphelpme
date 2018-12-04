@@ -309,7 +309,7 @@
                             android:layout_height="70dp"
                             android:background="@drawable/cerclebackgroundpurple"
                             android:src="@drawable/server"
-                            android:padding="10dp"/>
+                            android:padding="5dp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -348,8 +348,8 @@
                             android:layout_width="70dp"
                             android:layout_height="70dp"
                             android:background="@drawable/cerclebackgroundpink"
-                            android:src="@drawable/ic_lightbulb_outline_black_24dp"
-                            android:padding="10dp"/>
+                            android:src="@drawable/news"
+                            android:padding="5dp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -396,8 +396,8 @@
                             android:layout_width="70dp"
                             android:layout_height="70dp"
                             android:background="@drawable/cerclebackgroundpurple"
-                            android:src="@drawable/ic_wifi_black_24dp"
-                            android:padding="10dp"/>
+                            android:src="@drawable/exit"
+                            android:padding="5dp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"

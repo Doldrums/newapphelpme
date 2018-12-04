@@ -1,10 +1,10 @@
 package com.example.rina.new_app_help_me.models;
 
-public class MessageResponse {
+public class BirgaResponse {
     private boolean error;
-    private String message;
+    private String birga;
 
-    public MessageResponse() {
+    public BirgaResponse() {
 
     }
 
@@ -16,11 +16,11 @@ public class MessageResponse {
         this.error = error;
     }
 
-    public String getMessage() {
-        return message;
+    public String getBirga() {
+        return birga;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
+    public void setBirga(String birga) {
+        this.birga = birga;
     }
 }

@@ -8,7 +8,6 @@ import android.support.design.widget.FloatingActionButton;
 
 import android.support.v7.app.AppCompatActivity;
 
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
@@ -21,7 +20,7 @@ import com.example.rina.new_app_help_me.R;
 import com.example.rina.new_app_help_me.api.APIService;
 import com.example.rina.new_app_help_me.api.APIUrl;
 import com.example.rina.new_app_help_me.helper.SharedPrefManager;
-import com.example.rina.new_app_help_me.models.MessageResponse;
+import com.example.rina.new_app_help_me.models.BirgaResponse;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -30,20 +29,12 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class BirgaActivity extends AppCompatActivity {
-    private RecyclerView recyclerViewMessages;
-    private RecyclerView.Adapter adapter;
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_birga);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-
-
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -64,11 +55,11 @@ public class BirgaActivity extends AppCompatActivity {
                                 new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int id) {
 
-                                        //getting the values
+                                        //получаем значения
                                         String title = editTextTitle.getText().toString().trim();
                                         String message = editTextMessage.getText().toString().trim();
 
-                                        //sending the message
+                                        //отправляем
                                         sendMessage(title, message);
                                     }
                                 })
@@ -80,7 +71,6 @@ public class BirgaActivity extends AppCompatActivity {
                                 });
                 AlertDialog alertDialog = alertDialogBuilder.create();
                 alertDialog.show();
-
 
 
             }
@@ -102,26 +92,31 @@ public class BirgaActivity extends AppCompatActivity {
         APIService service = retrofit.create(APIService.class);
 
 
-        Call<MessageResponse> call = service.sendMessage(
+        Call<BirgaResponse> call = service.sendMessage(
                 SharedPrefManager.getInstance(this).getUser().getId(),
                 title,
                 message
         );
 
-        call.enqueue(new Callback<MessageResponse>() {
+        call.enqueue(new Callback<BirgaResponse>() {
             @Override
-            public void onResponse(Call<MessageResponse> call, Response<MessageResponse> response) {
+            public void onResponse(Call<BirgaResponse> call, Response<BirgaResponse> response) {
                 progressDialog.dismiss();
-                Toast.makeText(BirgaActivity.this, response.body().getMessage(), Toast.LENGTH_LONG).show();
+                try {
+                    Toast.makeText(BirgaActivity.this, response.body().getBirga(), Toast.LENGTH_LONG).show();
+                } catch (NullPointerException e) {
+                    Toast.makeText(BirgaActivity.this, "Что-то пошло не так, попробуйте еще раз", Toast.LENGTH_LONG).show();
+                }
+
             }
 
             @Override
-            public void onFailure(Call<MessageResponse> call, Throwable t) {
+            public void onFailure(Call<BirgaResponse> call, Throwable t) {
                 progressDialog.dismiss();
                 Toast.makeText(BirgaActivity.this, t.getMessage(), Toast.LENGTH_LONG).show();
             }
         });
     }
 
-
+        
 }

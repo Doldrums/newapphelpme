@@ -1,19 +1,17 @@
 package com.example.rina.new_app_help_me.models;
 
-public class Message {
+public class Birga {
     private int id;
     private int from;
-    private int to;
     private String title;
-    private String message;
+    private String birga;
     private String sent;
 
-    public Message(int id, int from, int to, String title, String message, String sent) {
+    public Birga(int id, int from, String title, String birga, String sent) {
         this.id = id;
         this.from = from;
-        this.to = to;
         this.title = title;
-        this.message = message;
+        this.birga = birga;
         this.sent = sent;
     }
 
@@ -25,16 +23,13 @@ public class Message {
         return from;
     }
 
-    public int getTo() {
-        return to;
-    }
 
     public String getTitle() {
         return title;
     }
 
-    public String getMessage() {
-        return message;
+    public String getBirga() {
+        return birga;
     }
 
     public String getSent() {

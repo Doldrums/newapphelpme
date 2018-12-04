@@ -1,7 +1,7 @@
 package com.example.rina.new_app_help_me.api;
 
-import com.example.rina.new_app_help_me.models.MessageResponse;
-import com.example.rina.new_app_help_me.models.Messages;
+import com.example.rina.new_app_help_me.models.BirgaResponse;
+import com.example.rina.new_app_help_me.models.Birgas;
 import com.example.rina.new_app_help_me.models.Result;
 import com.example.rina.new_app_help_me.models.User;
 
@@ -53,14 +53,14 @@ public interface APIService {
 
     @FormUrlEncoded
     @POST("sendbirga")
-    Call<MessageResponse> sendMessage(
+    Call<BirgaResponse> sendMessage(
             @Field("from") int from,
             @Field("title") String title,
             @Field("message") String message);
 
     //getting messages
     @GET("messages/{id}")
-    Call<Messages> getMessages(@Path("id") int id);
+    Call<Birgas> getMessages(@Path("id") int id);
 
 
 }

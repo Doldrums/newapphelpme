@@ -8,15 +8,15 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.rina.new_app_help_me.R;
-import com.example.rina.new_app_help_me.models.Message;
+import com.example.rina.new_app_help_me.models.Birga;
 
 import java.util.List;
 
-public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHolder> {
-    private List<Message> messages;
+public class BirgaAdapter extends RecyclerView.Adapter<BirgaAdapter.ViewHolder> {
+    private List<Birga> messages;
     private Context mCtx;
 
-    public MessageAdapter(List<Message> messages, Context mCtx) {
+    public BirgaAdapter(List<Birga> messages, Context mCtx) {
         this.messages = messages;
         this.mCtx = mCtx;
     }
@@ -29,11 +29,11 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
     }
 
     @Override
-    public void onBindViewHolder(MessageAdapter.ViewHolder holder, int position) {
-        final Message message = messages.get(position);
+    public void onBindViewHolder(BirgaAdapter.ViewHolder holder, int position) {
+        final Birga message = messages.get(position);
         holder.textViewName.setText(message.getFrom());
         holder.textViewTitle.setText(message.getTitle());
-        holder.textViewMessage.setText(message.getMessage());
+        holder.textViewMessage.setText(message.getBirga());
         holder.textViewTime.setText(message.getSent());
     }
 
